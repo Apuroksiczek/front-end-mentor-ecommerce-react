@@ -33,6 +33,7 @@ const ShopingCartMenu = () => {
 
     return (
         <div>
+
             <Button
                 ref={anchorRef}
                 id="composition-button"
@@ -43,29 +44,29 @@ const ShopingCartMenu = () => {
             >
                 <ShoppingCartOutlinedIcon className="clickable" />
             </Button>
-            <Popper
-                open={open}
-                anchorEl={anchorRef.current}
-                role={undefined}
-                placement="auto"
-                transition
-                disablePortal
-            >
-                {({ TransitionProps, placement }) => (
-                    <Grow
-                        {...TransitionProps}
-                        style={{
-                            transformOrigin:
-                                placement === 'bottom-start' ? 'left top' : 'left bottom',
-                        }}>
-                        <Paper>
-                            <ClickAwayListener onClickAway={handleClose}>
+            <ClickAwayListener onClickAway={handleClose}>
+                <Popper
+                    open={open}
+                    anchorEl={anchorRef.current}
+                    role={undefined}
+                    placement="auto"
+                    transition
+                    disablePortal
+                >
+                    {({ TransitionProps, placement }) => (
+                        <Grow
+                            {...TransitionProps}
+                            style={{
+                                transformOrigin:
+                                    placement === 'bottom-start' ? 'left top' : 'left bottom',
+                            }}>
+                            <Paper>
                                 <ShoppingCart />
-                            </ClickAwayListener>
-                        </Paper>
-                    </Grow>
-                )}
-            </Popper>
+                            </Paper>
+                        </Grow>
+                    )}
+                </Popper>
+            </ClickAwayListener >
         </div>
     )
 }

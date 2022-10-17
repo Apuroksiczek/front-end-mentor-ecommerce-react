@@ -1,20 +1,16 @@
 import { Dialog, DialogContent } from '@mui/material'
-
-export type DialogProps = {
-    open: boolean;
-    setOpenState: (open: boolean) => void;
-    image: string;
-};
+import { DialogProps } from '../models/dialog-props-interface'
 
 const DialogWithPhoto = ({ open, setOpenState, image }: DialogProps) => {
     return (
         <>
             <Dialog
-                style={{backgroundColor: 'transparent' }}
+                style={{ backgroundColor: 'transparent' }}
                 open={open}
                 onClose={val => setOpenState(false)}
             >
-                <DialogContent >
+                <DialogContent className='dialog-content'
+                >
                     <img src={image} alt="" />
                 </DialogContent>
             </Dialog>

@@ -243,6 +243,10 @@
   display: none;
 }
 
+.dialog-content::-webkit-scrollbar {
+  display: none;
+}
+
 @media only screen and (max-width: 900px) {
 
   .App {

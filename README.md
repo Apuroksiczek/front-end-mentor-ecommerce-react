@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+This app was created as part of learning React. Mockups taken from the Frontend Mentor website.
+https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

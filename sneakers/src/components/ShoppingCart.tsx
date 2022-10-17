@@ -3,6 +3,12 @@ import React from 'react'
 import DeleteIcon from '@mui/icons-material/Delete';
 
 const ShoppingCart = () => {
+
+  function checkoutItems()
+  {
+    console.log("checkout function")
+  }
+
   return (
     <div className='shopping-cart-menu'>
       <div className='shopping-cart-menu-title'>Cart </div>
@@ -23,7 +29,9 @@ const ShoppingCart = () => {
           <DeleteIcon />
         </div>
         <Divider style={{ width: '80%' }} />
-        <button className='checkout-button cart-button'>
+        <button 
+          className='checkout-button cart-button'
+          onClick={() => checkoutItems()}>
           Checkout
         </button>
       </div>

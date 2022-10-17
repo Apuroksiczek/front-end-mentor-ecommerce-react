@@ -11,6 +11,11 @@ export const Amount = () => {
         setCounter(counter - 1);
     }
 
+    function addItemsToCart()
+    {
+        console.log("add items to cart function");
+    }
+
     return (
         <div className='amount'>
             <div className='amount-clicker'>
@@ -18,7 +23,9 @@ export const Amount = () => {
                 <button className='amount-button' >{counter}</button>
                 <button className='amount-button button-right' onClick={() => setCounter(counter + 1)}>+</button>
             </div>
-            <button className='cart-button'>
+            <button 
+            onClick={() => addItemsToCart()}
+            className='cart-button'>
                 <ShoppingCartOutlinedIcon
                     className='icon-cart-small' />
                 <span>Add to cart</span>

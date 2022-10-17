@@ -12,8 +12,7 @@ const Navbar = () => {
     <>
       <button
         className="navbar navbar-mobile"
-        onClick={() => setOpen(true)}
-        style={{ display: (open) ? 'none' : '' }}
+        onClick={() => setOpen(!open)}
       >
         <MenuIcon />
       </button>
@@ -35,12 +34,6 @@ const Navbar = () => {
             alt="Cat Photo"
             src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187.jpg?w=1272&h=848" />
         </div>
-        <ClearIcon
-          onClick={() => setOpen(false)}
-          className="close-popup"
-          style={{
-            display: (!open) ? 'none' : ''
-          }} />
       </nav>
       <Divider style={{ width: '80%' }} />
     </>
